@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+*{
+  font-family:'Varela Round', sans-serif;
+  color: #fff;
+  box-sizing:border-box;
+}
+body{
+  background-color: rgb(0, 0, 0);
+  margin-top: 0;
+}
+
+.nav{
+  margin-top: 30px;
+  background-color: transparent;
+}
+
+.nav ul{
+  margin: 30px;
+  padding: 0px;
+  text-align: center;
+  justify-content: center;
+}
+
+.nav a{
+  margin: 60px;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  
+  
+}
+
+.nav ul :hover{
+color: rgb(67, 143, 242); 
+  transition: 0.3s;
+  text-shadow: 0 0 10px rgb(106, 6, 236), 
+               0 0 20px rgb(106, 6, 236), 
+               0 0 40px rgb(106, 6, 236), 
+               0 0 80px rgb(220, 0, 240), 
+               0 0 120px rgb(220, 0, 240), 
+               0 0 160px rgb(220, 0, 240);
+
+} 
+
+.brief{
+  min-height: 100vh;
+  width: 100%;
+  height: 600px;
+  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url('Pictures/backgrounds/Goals.png');
+  background-position: top;
+  background-size: cover;
+  position: relative;
+}
+
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  section .content{
+  
+    max-width: 80%;
+  }
+  
+  section .content h2{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    font-size: 3em;
+    transition: 0.5s;
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+  
+  section .content h3{
+    position: relative;
+    margin: 5px 0 0;
+    padding: 0;
+    display: inline-block;
+    font-size: 2em;
+    transition: 0.5s;
+    transform-origin: right;
+    transform: scaleX(1);
+  }
+  
+
+  
+  section .content p{
+    font-size: 1.2em;
+    transition: 1s;
+  }
+  
+  /* Goals page - timeline */
+  
+  .main{
+    width: 100%;
+    height: auto;
+    padding: 50px 0;
+    display: grid;
+    place-items: center;
+  }
+  
+  .main .heading{
+    font-size: 27px;
+    font-weight: 500;
+    position: relative;
+    margin-bottom: 80px;
+  }
+  
+  .heading::after{
+    position: absolute;
+    content: ' ';
+    width: 50%;
+    height: 4px;
+    left: 50%;
+    bottom: -5px;
+    background-image: linear-gradient(to right, rgb(106, 6, 236), rgb(220, 0, 240));
+    transform: translateX(-50%);
+  
+  }
+  
+  /* container CSS Start */
+  .container{
+    width: 70%;
+    height: auto;
+    position: relative;
+  }
+  
+  .container::after{
+    position: absolute;
+    content: ' ';
+    width: 2px;
+    height: 100%;
+    background-image: linear-gradient(to right, rgb(106, 6, 236), rgb(220, 0, 240));
+  
+  }
+  
+  .container ul{
+    list-style: none;
+  }
+  
+  .container ul li{
+    width: 50%;
+    height: auto;
+    padding: 15px 20px;
+    box-shadow: 1px 1px 25px rgba(92, 92, 92, 0.384);
+    border-radius: 10px;
+    margin-bottom: 30px;
+    z-index: 99;
+    position: relative;
+  }
+  
+  .container ul li:nth-child(odd){
+    float: left;
+    clear: right;
+    transform: translateX(-30px);
+  }
+  
+  .container ul li :nth-child(odd) .date{
+    right: 20px;
+  }
+  .container ul li:nth-child(even){
+    float: right;
+    clear: left;
+    transform: translateX(30px);
+  }
+  
+  .container ul li:nth-child(4){
+    margin-bottom: 0;
+  }
+  
+  .container ul li .title{
+    font-size: 22px;
+    font-weight: 500;
+  
+  }
+  
+  ul li p{
+    font-size: 15px;
+    margin: 7px 0;
+    line-height: 23px;
+  }
+  
+  ul li .date{
+    position: absolute;
+    top: -40px;
+    left: 20px;
+    width: 135px;
+    height: 35px;
+    border-radius: 20px;
+    background-image: linear-gradient(to right, rgb(106, 6, 236), rgb(220, 0, 240));
+    display: grid;
+    place-items: center;
+    font-size: 14px;
+  }
+  
+  .container ul li .circle{
+    width: 30px;
+    height: 30px;
+    background-color: rgb(220, 0, 240);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+  }
+  
+  .container ul li .circle::after{
+    content: ' ';
+    width: 20px;
+    height: 20px;
+    background-color: rgb(106, 6, 236);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .container ul li:nth-child(odd) .circle{
+    right: -30px;
+    transform: translate(50%, -50%);
+  }
+  
+  .container ul li:nth-child(even) .circle{
+    left: -30px;
+    transform: translate(-50%, -50%);
+  }
+  
+  /* MEdia Query for Timeline */
+  
+  @media screen and (max-width:1224px) {
+  
+    .container{
+      width: 85%;
+    }
+    
+  }
+  
+  @media screen and (max-width:933px) {
+  
+    .container{
+      width: 80%;
+      transform: translateX(15px);
+    }
+  
+    .container ul::after{
+      left: -30px;
+    }
+  
+    .container ul li{
+      width: 100%;
+      float: none;
+      clear: none;
+      margin-bottom: 80px;
+    }
+  
+    .container ul li:nth-child(odd){
+      transform: translateX(0);
+      text-align: left;
+    }
+    
+    .container ul li:nth-child(odd) .date{
+      left: 20px;
+    }
+  
+    .container ul li:nth-child(odd) .circle{
+      left: -30px;
+      transform: translate(-50%, -50%);
+    }
+  
+    .container ul li:nth-child(even){
+      transform: translateX(0);
+    }
+  }

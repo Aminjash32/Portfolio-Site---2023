@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+*{
+  font-family:'Varela Round', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body{
+    background-color: rgb(0, 0, 0);
+}
+
+.Books{
+    background-color: #e4aa77; 
+    height: 600px;
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+
+.nav{
+    margin-top: 30px;
+    background-color: transparent;
+  }
+  
+  .nav ul{
+    margin: 30px;
+    padding: 0px;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .nav a{
+    margin: 60px;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+      
+  }
+  
+  .nav ul :hover{
+  color: rgb(67, 143, 242); 
+    transition: 0.3s;
+    text-shadow: 0 0 10px rgb(106, 6, 236), 
+                 0 0 20px rgb(106, 6, 236), 
+                 0 0 40px rgb(106, 6, 236), 
+                 0 0 80px rgb(220, 0, 240), 
+                 0 0 120px rgb(220, 0, 240), 
+                 0 0 160px rgb(220, 0, 240);
+  
+  }
+
+.brief{
+    min-height: 100vh;
+    width: 100%;
+  
+  }
+
+/* Brief  */
+.brief{
+    width:100%;
+    height: 800px;
+    margin: 0;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url('Pictures/backgrounds/Hobbies.png');
+    background-position: top;
+    background-size: cover;
+    position: relative;
+}
+
+.go{
+    margin: 10px;
+}
+
+.go a{
+    padding: 20px;
+    background-color: #ddaaaa;
+    color: black;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.go a:hover{
+    background-color: #916c6c;
+}
+/* Reading */
+
+.card{
+    margin: 100px;
+    position: relative;
+    width: 300px;
+    height:400px;
+    background: #fff;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    box-shadow: 10px 20px 40px rgba(0, 0, 0, 0.25);
+    transition: 1s;
+}
+
+.card:hover{
+    transform: translateX(50%);
+}
+
+.card .imgBox{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transform-origin: left;
+    transform-style: preserve-3d;
+    background: #000;
+    transition: 1s;
+    box-shadow: 10px 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.card:hover .imgBox{
+    transform: rotateY(-180deg);
+}
+
+.card .imgBox img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform-style: preserve-3d;
+    backface-visibility:hidden;
+}
+
+.card .imgBox img:nth-child(2){
+    transform: rotateY(180deg);
+
+}
+.card .details{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .details .content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card .details .content h2{
+    text-align: center;
+    font-weight: 700;
+    line-height: 1em;
+}
+
+.card .details .content h2 span{
+    color: #e22112;
+    font-size: 0.8em;
+}
+
+/* write */
+
+.write{
+    width:100%;
+    height: 800px;
+    margin: 0;
+    padding: 20px;
+    background-color: #DAA06D;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.container{
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.write .pic{
+    margin: 10px;
+    border-radius: 10px;
+    width: 500px;
+    height: auto;
+    display:block;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+}
+
+.pic img{
+    width: 500px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.pic h2{
+    padding: 5px;
+    text-align: center;
+}
+
+
+/* Music */
+
+.music{
+    width:100%;
+    height: 800px;
+    margin: 0;
+    background-color:#d79963;
+}
+
+.music h2{
+    padding: 5px;
+    text-align: center;
+
+
+}
+
+.music .pic{
+    margin: 10px;
+    border-radius: 10px;
+    width: 500px;
+    height: auto;
+    display:block;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+}
+
+.music img{
+    width: 500px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+/* Coding */
+
+.code{
+    width:100%;
+    height: 800px;
+    margin: 0;
+    padding: 20px;
+    background-color: #cf925c;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.code .pic{
+    margin: 10px;
+    border-radius: 10px;
+    width: 500px;
+    height: auto;
+    display:block;
+    align-items: center;
+    justify-content: center;
+    background-color: #fffbfb;
+}

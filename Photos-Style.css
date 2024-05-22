@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+*{
+  font-family:'Varela Round', sans-serif;
+  color: #fff;
+  box-sizing:border-box;
+}
+body{
+  background-color: rgb(0, 0, 0);
+  margin-top: 0;
+}
+
+.nav{
+  margin-top: 30px;
+  background-color: transparent;
+}
+
+.nav ul{
+  margin: 30px;
+  padding: 0px;
+  text-align: center;
+  justify-content: center;
+}
+
+.nav a{
+  margin: 60px;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  
+  
+}
+
+.nav ul :hover{
+color: rgb(67, 143, 242); 
+  transition: 0.3s;
+  text-shadow: 0 0 10px rgb(106, 6, 236), 
+               0 0 20px rgb(106, 6, 236), 
+               0 0 40px rgb(106, 6, 236), 
+               0 0 80px rgb(220, 0, 240), 
+               0 0 120px rgb(220, 0, 240), 
+               0 0 160px rgb(220, 0, 240);
+
+} 
+
+.brief{
+  min-height: 100vh;
+  width: 100%;
+  background-image: url('Pictures/backgrounds/Photos.png');
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.banner img{
+    max-width: 100%;
+    padding: 10px;
+    width: 600px;
+    height: auto;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.goodtimes{
+  width: 100%;
+  height: auto;
+  padding: 10px;
+}
+
+.goodtimes h2,p{
+  color: #fff;
+  text-align: center;
+}
+
+.places{
+  width: 100%;
+  height: auto;
+  padding: 20px;
+}
+
+.places h2, p{
+  color: #fff;
+  text-align: center;
+}
+
+.food{
+  width: 100%;
+  height: auto;
+  padding: 20px;
+
+}
+
+.food h2, p{
+  color: #fff;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 3px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  max-width: 50%;
+  padding: 0 3px;
+}
+
+.column img {
+  border-radius: 5px;
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
